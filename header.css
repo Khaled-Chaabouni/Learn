@@ -1,0 +1,901 @@
+/* Page Style alongside its respective items : */
+/*---------------------------------------------------------------------------*/
+                                                                            /*/
+    /* ---------------------------------------------------------------*/    /*/
+    /*       Page Styling alongside its respective items :            */    /*/    
+    /* ---------------------------------------------------------------*/    /*/
+                                                                            /*/
+/*---------------------------------------------------------------------------*/
+
+@font-face { 
+    font-family: 'Coves sans'; 
+    src: url(fonts/CovesBold.otf); 
+    font-weight: 400; 
+    font-display: swap;
+    }
+@font-face { 
+    font-family: 'Coves sans'; 
+    src: url(fonts/CovesLight.otf);
+    font-weight: normal;
+    font-display: swap;
+    }
+::-webkit-scrollbar{
+    display: none;
+}
+
+html{
+    background: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family:'Coves sans';
+}
+a{
+    text-decoration: none;
+    color:whitesmoke;
+}
+p{
+    color:rgb(126, 124, 124);
+}
+/*Logo Positionning :*/
+.logo{
+    box-shadow: black 1px 1px 10px;
+    border-radius: 0px 0px 50px 0px;
+    background-color: black;
+    color:rgb(255, 100, 0);
+    width: 10em;
+    height: 4em;
+    transition: .3s;
+    overflow: hidden;
+    z-index: 1;
+    position: fixed;
+    top:0px;
+    left:0px;
+}
+    .logo:hover{
+        height: 4.6em;
+        width: 11em;
+    }
+    .logo:hover h1{
+        color:rgb(255, 100, 0);
+        text-shadow: rgb(255, 100, 0) 1px 1px 5px;
+        font-size: 34px;
+        padding-left:5px;
+        padding-bottom: 35px;
+        height: 1em;
+    }
+    .logo h1{
+        padding-top: 10px;
+        text-shadow: rgb(255, 100, 0) 1px 1px 5px;
+        font-weight:bold;
+        margin-top: -35px;
+        padding-bottom: 25px;
+        transition: 0.3s;
+        font-family: 'Rock Salt', cursive;
+        height: 1em;
+        cursor: pointer;
+        padding-left:10px;
+    }
+/*---------------------------------------------------------------------------*/
+                                                                            /*/
+    /* -------------------------*/                                          /*/
+    /*      Navigation bar      */                                          /*/
+    /* -------------------------*/                                          /*/
+                                                                            /*/
+/*---------------------------------------------------------------------------*/
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    border-radius: 0px 0px 0px 5px;
+    position:fixed;
+    z-index: +1;
+    width: 86em;
+    margin-left:41em;
+    top:0px;
+}
+    /* --------------------------------*/
+    /*   Menu layout along its items   */
+    /* --------------------------------*/
+    .menu{
+        text-align: right;
+        padding-left: 10em;
+        box-shadow: black 1px 1px 5px;
+        border-radius: 0px 0px 0px 5em;
+        background:black;
+    }
+        nav ul{
+            display:flex;
+            list-style-type: none;
+            margin-top: 1.5rem;
+            margin-right: 2em;
+        }
+        nav ul li button{
+            display:flex;
+            align-content: center;
+            justify-content: center;
+            transition: 0.2s linear;
+            height: fit-content;
+            width: fit-content;
+            padding: 10px 25px;
+            color:white;
+            border-width: 0px;
+            letter-spacing: 2.5px;
+            border-style: solid;
+            cursor:pointer;
+            font-family:'Coves sans';
+            font: 900 1rem Raleway, Coves sans;
+            -webkit-text-stroke:  var(--fill-color);
+            background: linear-gradient(var(--fill-color) 50% 100%) left / 0 no-repeat;
+            background-color: black;
+            --fill-color: white;
+            font-size: medium;
+        }
+        nav ul li button:hover{
+            border-color: black;
+            border-width: 0px 0px .7em 0px;
+            border-color: white;
+            background-size: 100%;
+            color: rgb(255, 100, 0);
+            padding-bottom: 10px;
+        }
+        nav ul li button img{
+            margin-left: 10px;
+        }
+        nav ul li button:hover img{
+            filter: invert(0.5) brightness(0%);
+        }
+        nav ul ul{
+            display:none;
+        }
+        /* --------------------------------*/
+        /*   User dropdown menu on hover   */
+        /* --------------------------------*/
+        nav ul li:hover ul{
+            display: block;
+            position: absolute;
+            justify-content: center;
+            top: 40px;
+            border-radius: 0px 0px 10px 25px;
+        }
+        nav ul li ul li button{
+            padding: 5px;
+            width: 160px;
+        }
+        nav ul li ul button:hover{
+            background-color: rgb(255, 100, 0);
+        }
+    
+/*---------------------------------------------------------------------------*/
+                                                                            /*/
+    /* -------------------------*/                                          /*/
+    /*   Buttons/Ancres/Inputs  */                                          /*/
+    /* -------------------------*/                                          /*/
+                                                                            /*/
+/*---------------------------------------------------------------------------*/
+button ,a{
+    transition: 0.2s linear;
+    height: fit-content;
+    width: fit-content;
+    color:white;
+    letter-spacing: 2.5px;
+    border-style: solid;
+    cursor:pointer;
+    border-width: 1px;
+    border-color: black;
+    font-family:'Coves sans';
+    font: 900 3rem Raleway, Coves sans;
+    -webkit-text-stroke:  var(--fill-color);
+    background: linear-gradient(var(--fill-color) 50% 100%) left / 0 no-repeat;
+    background-color: black;
+    --fill-color: white;
+    font-size: medium;
+}
+input[type=submit]{
+    transition: 0.2s linear;
+    height: fit-content;
+    width: fit-content;
+    color:white;
+    letter-spacing: 2.5px;
+    border-style: solid;
+    cursor:pointer;
+    border-width: 1px;
+    border-color: black;
+    font-family:'Coves sans';
+    font: 900 3rem Raleway, Coves sans;
+    -webkit-text-stroke:  var(--fill-color);
+    background: linear-gradient(var(--fill-color) 50% 100%) left / 0 no-repeat;
+    background-color: black;
+    --fill-color: white;
+    font-size: medium;
+    padding: 10px 25px;
+}
+button:hover,a:hover,input[type=submit]:hover{
+    background-size: 100%;
+    color: rgb(255, 100, 0);
+    padding-bottom: 10px;
+}
+/*---------------------------------------------------------------------------*/
+                                                                            /*/
+    /* -------------------------*/                                          /*/
+    /*         Home page        */                                          /*/
+    /* -------------------------*/                                          /*/
+                                                                            /*/
+/*---------------------------------------------------------------------------*/
+.Landing{
+    overflow: hidden;
+}
+.Home{
+    position:absolute;
+    top:8em;
+    left:5em;
+    padding-top: 2em;
+}
+#bgvid{
+    transition: .7s;
+    filter: contrast(1.3);
+}
+#bgvid:hover{
+    filter: contrast(1.5);
+}
+.Home h2{
+    font-weight: bold;
+    letter-spacing: 0px;
+    filter: contrast(1.3);
+    color: rgb(255,100,0);
+    text-shadow: black 1px 1px 5px;
+}
+.quickdesc{
+    margin-top: 1em;
+    width: 25em;
+    font-size: 2em;
+    text-shadow: black 1px 1px 5px;
+    margin-left:0em;
+}
+#parg{
+    color: rgb(255,100,0);
+    text-shadow: black 1px 1px 5px;
+    
+}
+.quickdesc p{
+    color: black;
+}
+.Home .quickdesc h2{
+    color: white;
+    opacity: 1;
+}
+.explorebtn{
+    transition: .5s;
+    padding: 10px;
+}
+/*---------------------------------------------------------------------------*/
+                                                                            /*/
+    /* -------------------------*/                                          /*/
+    /*        Search bar        */                                          /*/
+    /* -------------------------*/                                          /*/
+                                                                            /*/
+/*---------------------------------------------------------------------------*/
+#searchform{
+    margin-left: 2em;
+    border-style:solid;
+    background:  white;
+    border-width:1px 1px 0px 0px;
+    box-shadow:black 1px 1px 5px;
+    border-color:black;
+    margin:0em auto 2px auto;
+    width:auto;
+    padding-top:.5em;
+    padding-bottom:1em;
+    color: black;
+    padding-left: 12.5em;
+}
+#searchlabel{
+    font-size: larger;
+    color:black;
+    font-size:30px;
+    text-shadow:black 5px 5px 5px;
+    margin-right: 10px;
+}
+#searchquery{
+    height:32px;
+    padding-left:10px;
+    margin-top: 10px;
+    color:rgb(255, 100, 0);
+    font-weight: bold;
+    font-size:20px;
+    padding-bottom: 2px;
+    border-color: black;
+    border-width: 0px 0px 3px 0px;
+    width:15em;
+}
+#searchbutton{
+    padding: 10px 25px;
+}
+/*---------------------------------------------------------------------------*/
+                                                                            /*/
+    /* -------------------------*/                                          /*/
+    /*         Articles         */                                          /*/
+    /* -------------------------*/                                          /*/
+                                                                            /*/
+/*---------------------------------------------------------------------------*/
+.shop{
+    display: flex;
+}
+.sorts{
+    background:black;
+    width: 10.5em;
+    padding-top: 11px;
+}
+#sortby{
+    width: 10.5em;
+    height: 2em;
+    color: black;
+    background-color: white;
+    --fill-color: rgb(255,100,0);
+    cursor: default;
+}
+#sortby:hover{
+    color: white;
+    padding-bottom: 0px;
+}
+.sorts form ul li button{
+    width: 10.5em;
+    height: 1.5em;
+}
+.sorts form ul li button:hover #sortby:hover{
+    width: 10.5em;
+    height: 1.5em;
+}
+.articles{
+    padding-left: 5px;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    box-shadow:black 1px 1px 10px;
+    color:white;
+    margin: auto .1em auto .1em;
+    width: 81em;
+    display: flex;
+    padding-top: 5px;
+    flex-wrap: wrap;
+    background: white;
+}
+.articles div{
+    background-color: white;
+    margin:5px;
+    color:black;
+    border-width: 1px;
+    border-style: solid;
+    height: fit-content;
+    text-align:center;
+    overflow: hidden;
+    width:24em;
+}
+.article h1{
+    position: relative;
+    text-align:justify;
+    color:white;
+    z-index: 0;
+    bottom:1.5em;
+    text-shadow:black 5px 5px 5px;
+}
+#productimg{
+    margin-left:-8em;
+    align-items: center;
+    align-items: center;
+    position:relative;
+    width: auto;
+    height: 22em;
+    transition: .7s;
+}
+@keyframes identifier {
+    0% { filter: contrast(1); }
+    10% { filter: contrast(1.2); }
+    20% { filter: contrast(1.4); }
+    30% { filter: contrast(1.6);}
+    40% { filter: contrast(1.8);}
+    50% { filter: contrast(2);}
+    60% { filter: contrast(1.8);}
+    70% { filter: contrast(1.6);}
+    80% { filter: contrast(1.4);}
+    90% { filter: contrast(1.2);}
+    100% { filter: contrast(1);}
+}
+.article:hover #productimg{
+    animation-duration: 5s;
+    opacity: .8;
+    animation-name: identifier;
+    width: auto;
+    height: 24em;
+}
+.article h2{
+    position: relative;
+    top: -1em;
+    padding: 0px;
+}
+#addcart{
+    margin-top: -1em;
+    margin-bottom: .5em;
+}
+/*---------------------------------------------------------------------------*/
+                                                                            /*/
+    /* -------------------------*/                                          /*/
+    /*       Register/Login     */                                          /*/
+    /* -------------------------*/                                          /*/
+                                                                            /*/
+/*---------------------------------------------------------------------------*/
+.Account{
+    display: flex;   
+    background: linear-gradient(75deg ,white, rgb(255,100,0),black 100%);
+    height: 39.3em;
+    overflow: hidden;
+}   
+    /* -------------------*/
+    /* ------REGISTE------*/
+    /* -------------------*/
+    #Register{
+        background-color: white;
+        margin: 6em 0px 2em auto;
+        width: 28em;
+        transition: .7s;
+        border-width: 0px 2px 0px 0px;
+        border-style: solid;
+        overflow: hidden;
+    }
+    #Register:hover{
+        width: 32em;
+    }
+    .RegisterForm{
+        padding: 2em;
+    }
+    .RegisterForm label{
+        color: black;
+        font-weight:bold;
+    }
+    .RegisterForm h1{
+        color: rgb(255, 100, 0);
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .RegisterForm input,a,label{
+        margin: 5px;
+    }
+    .RegisterForm input[type=text],input[type=email],input[type=password],input[type=tel],input[type=date],input[type=file]{
+        border-style: solid;
+        border-width: 0px 0px 2px 0px;
+        border-radius: 3px;
+        border-color: rgb(255, 100, 0);
+        font-size: 20px;
+        font-weight: bold;
+        transition: .3s;
+    }
+    .RegisterForm input[type=text]:focus,input[type=email]:focus,input[type=password]:focus,input[type=tel]:focus,input[type=date]:focus{
+        height: 1.5em;
+        background-color: black;
+        color: white;
+        border-color: white;
+        border-bottom-width: 5px;
+    }
+    .RegisterForm input[type=email]{
+        width: 18em;
+    }
+    .RegisterForm input[type=file]{
+        width: 18em;
+        padding-left: 0px;
+    }
+    .RegisterForm input[type=file]::before{
+        content: 'Upload profile picture';
+        cursor: pointer;
+        margin:0px;
+        color:rgb(235, 235, 235);
+        background-color: rgb(255, 100, 0);
+        border-style: solid;
+        border-radius: 0px;
+        border-width:0px;
+        border-color:black;
+        padding:10px;
+        transition: .3s;
+    }
+    .RegisterForm input[type=file]:hover::before{
+        color: black;
+        transition: .3s;
+    }
+    .RegisterForm input[type=file]::-webkit-file-upload-button {
+        display:none;
+    }
+    .RegisterForm a{
+        background-color: transparent;
+        color: black;
+        border-width: 0px;
+    }
+    /* -------------------*/
+    /* ------ LOGIN ------*/
+    /* -------------------*/
+    #Login{
+        background-color: white;
+        width: 28em;
+        transition: .7s;
+        margin: 6em auto 2em 0px;
+        border-width: 0px 0px 0px 2px;
+        border-style: solid;
+        overflow: hidden;
+    }
+    #Login:hover{
+        width: 32em;
+    }
+    .LoginForm{
+        padding: 2em;
+    }
+    .LoginForm h1{
+        color: rgb(255, 100, 0);
+    }
+    .LoginForm input,a,label{
+        margin: 5px;
+    }
+    .LoginForm label{
+        color: black;
+        font-weight:bold;
+    }
+    .LoginForm h1{
+        color: rgb(255, 100, 0);
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .LoginForm input,a,label{
+        margin: 5px;
+    }
+    .LoginForm input[type=email],input[type=password]{
+        border-style: solid;
+        border-width: 0px 0px 2px 0px;
+        border-radius: 3px;
+        border-color: rgb(255, 100, 0);
+        font-size: 20px;
+        font-weight: bold;
+        transition: .3s;
+    }
+    .LoginForm input[type=email]:focus,input[type=password]:focus{
+        height: 1.5em;
+        background-color: black;
+        color: white;
+        border-color: white;
+        border-bottom-width: 5px;
+    }
+    input[type=email]{
+        width: 18em;
+    }
+    .LoginForm a{
+        background-color: transparent;
+        color: black;
+        border-width: 0px;
+    }
+/*---------------------------------------------------------------------------*/
+                                                                            /*/
+    /* -------------------------*/                                          /*/
+    /*          About           */                                          /*/
+    /* -------------------------*/                                          /*/
+                                                                            /*/
+/*---------------------------------------------------------------------------*/
+.Aboutpage{
+    display: flex;
+    background: linear-gradient(75deg ,white, rgb(255,100,0),black 100%);
+}
+.aboutcontent{
+    margin: 0px 0em auto 8em;
+    font-size: 20px;
+    width:14em;
+    border-right-style: dashed;
+    border-color: white;
+    border-right-width: 4px;
+    background-color: black;
+    padding:8em 100px 15em 100px;
+}
+.aboutcontent h1{
+    color: rgb(255, 100, 0);
+    margin-left: 5px;
+}
+.aboutcontent h3{
+    color: white;
+    margin-left: 0em;
+}
+.aboutvideo video{
+    margin-top: -15em;
+    width:35em;
+    height:65em;
+    background-color: black;
+}
+/*---------------------------------------------------------------------------*/
+                                                                            /*/
+    /* -------------------------*/                                          /*/
+    /*         Contact          */                                          /*/
+    /* -------------------------*/                                          /*/
+                                                                            /*/
+/*---------------------------------------------------------------------------*/
+.Contactbody{
+    background:linear-gradient(75deg ,white, rgb(255,100,0),black 50%);
+}
+.Contactpage h1{
+    color: rgb(255, 100, 0);
+}
+.Contactpage{
+    background-color: black;
+    align-items: center;
+    text-align: center;
+    padding: 3em;
+    margin:3.15em auto .75em auto;
+    font-size: 25px;
+    color: white;
+    overflow: hidden;
+    width: fit-content;
+    box-shadow: black 5px 5px 5px;  
+}
+#contact{
+    border-radius: 0px;
+    border-width: 0px;
+    background-color: rgb(255,100,0);
+}
+.Contactpage label, .Contactpage input[type=text],.Contactpage select ,.Contactpage textarea{
+    font-size:25px;
+    background: transparent;
+    width: 10em;
+    padding-left: 10px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: none none solid none;
+    border-color: white;
+    color: white;
+}
+.Contactpage #text{
+    height: 5em;
+}
+.Contactpage select option{
+    color:rgb(255,100,0);
+}
+
+/*---------------------------------------------------------------------------*/
+                                                                            /*/
+    /* -------------------------*/                                          /*/
+    /*         Profile          */                                          /*/
+    /* -------------------------*/                                          /*/
+                                                                            /*/
+/*---------------------------------------------------------------------------*/
+.Profile{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* margin-top: 10em; */
+    margin:3.15em auto auto auto;
+    background-color: black;
+    font-size: 25px;
+    color: white;
+    overflow: hidden;
+    width: fit-content;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+}
+.Primg img{
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 5px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(255, 100, 0);
+}
+.Profile .Profile-Picture{
+    filter: blur(10px) contrast(175%);
+    display: inline-block;
+    width: 22em;
+    height: 22em;
+    object-fit: cover;
+}
+.Profile .Profile-Informations{
+    padding: 1.5em;
+    background: black;
+}
+.Profile .Profile-Informations h2{
+    letter-spacing: 2px;
+    font-weight: bolder;
+    color: rgb(255, 100, 0);
+}
+.Profile .Profile-Informations h3{
+    letter-spacing: 1px;
+    font-weight: normal;
+    color: white
+}
+/*---------------------------------------------------------------------------*/
+                                                                            /*/
+    /* -------------------------*/                                          /*/
+    /*           Cart           */                                          /*/
+    /* -------------------------*/                                          /*/
+                                                                            /*/
+/*---------------------------------------------------------------------------*/
+.cart{
+    display: flex;
+}
+.confirmcart{
+    background:white;
+    width: 11em;
+    
+    text-align: center;
+}
+/*---------------------------------------------------------------------------*/
+                                                                            /*/
+    /* -------------------------*/                                          /*/
+    /*      Adding Products     */                                          /*/
+    /* -------------------------*/                                          /*/
+                                                                            /*/
+/*---------------------------------------------------------------------------*/
+
+.edpage{
+    text-align:center;
+    border-style:solid;
+    border-width:1px 1px 0px 0px;
+    box-shadow:black 1px 1px 10px;
+    border-color:black;
+    background-color: black;
+    margin:auto;
+    position: fixed;
+    width:80em;
+    padding-top:2em;
+    padding-bottom:4em;
+}
+#CreatePr{
+    padding: .5em 1.5em .5em 1.5em;
+    margin: 7.8em auto auto 35.25em;
+    width: fit-content;
+    background-color: black;
+    text-align: center;
+    align-items: center;
+    align-content:center;
+}
+#CreatePr div{
+    background-color: transparent;
+    padding: 0px 0px 0px 5px;
+    margin: 5px auto 0px auto;
+    font-size: 16px;
+    color: white;
+    width: 9em;
+}
+#CreatePr input[type=number]{
+    background-color: transparent;
+    width: 6em;
+    height: 1.5em;
+    padding: 0px 0px 0px 5px;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: rgb(255,100,0);
+    border-radius: 5px;
+    margin: 2px;
+    font-size: 18px;
+    color: white;
+}
+#CreatePr #name{
+    background-color: transparent;
+    width: 8em;
+    height: 1.5em;
+    padding: 0px 0px 0px 5px;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: rgb(255,100,0);
+    border-radius: 5px;
+    margin: 2px;
+    font-size: 18px;
+    color: white;
+}
+#CreatePr #duration{
+    background-color: transparent;
+    width: 5em;
+    height: 1.5em;
+    padding: 0px 0px 0px 5px;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: rgb(255,100,0);
+    border-radius: 5px;
+    margin: 2px;
+    font-size: 18px;
+    color: white;
+}
+#CreatePr input[type=file]{
+    width: 8.4em;
+    margin: 5px 5px 15px 5px;
+    padding-left: 0px;
+    border-width: 1px 1px 3px 1px;
+    border-style: solid;
+    border-top-color: white;
+    border-right-color: white;
+    border-left-color: white;
+    border-bottom-color: rgb(255,100,0);
+    border-radius: 5px;
+    color: white;
+}
+#CreatePr input[type=file]::before{
+    content: 'Upload product picture';
+    font-size: 17px;
+    cursor: pointer;
+    margin:0px;
+    color:white;
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 0px;
+    border-width:0px;
+    border-color:black;
+    padding:10px;
+    transition: .3s;
+}
+#CreatePr input[type=file]:hover::before{
+    color: rgb(255,100,0);
+    transition: .3s;
+}
+#CreatePr input[type=file]::-webkit-file-upload-button {
+    display:none;
+}
+#CreatePr input[type=submit]{
+    color: black;
+    background-color: white;
+    --fill-color:rgb(255,100,0);
+}
+/*---------------------------------------------------------------------------*/
+                                                                            /*/
+    /* -------------------------*/                                          /*/
+    /*      Editing Products    */                                          /*/
+    /* -------------------------*/                                          /*/
+                                                                            /*/
+/*---------------------------------------------------------------------------*/
+.upd .articles{
+    margin: -10px auto auto auto;
+    background:black;
+    overflow: hidden;
+    display: flex;
+}
+.articles .editem{
+    display: block;
+    width:24em;
+    background-color: white;
+    margin: .5em 0em 0em 10em;
+    z-index: 1;
+}
+.articles .editem form input{
+    font-size: 20px;
+    padding-right: 2em;
+    padding-left: 2em;
+    margin-top: 5px;
+    font-weight: bolder;
+}
+.articles .editem form input[type=text],.articles .editem form input[type=number]{
+    font-size: 20px;
+    padding-right: 2em;
+    padding-top: 2px;
+    width: 14.5em;
+    padding-left: 2em;
+    margin-top: 5px;
+    font-weight: bolder;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-radius: 10px;
+}
+.articles .editem form label{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.articles .editem form input[type=radio]{
+    padding-top: 50000px;
+}
+#upditem{
+    background-color: white;
+}
+#delitem{
+    padding: 2px 0px 5px 0px;
+}
+#prodpic{
+    filter: blur(10px) contrast(175%);
+    padding-left: 0px;
+    display: inline-block;
+    width: 45em;
+    height: 40em;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: 0;
+}
